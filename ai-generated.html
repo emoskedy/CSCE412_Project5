@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            margin-top: 60px;
+        }
+
+        .calculator input[type="text"] {
+            grid-column: span 4;
+            width: 92%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .calculator .number-button {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .calculator .operator-button {
+            padding: 10px;
+            font-size: 18px;
+            grid-column: span 1;
+        }
+
+        .calculator .clear-button {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* Style for the information div */
+        .information {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .information p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Credit text */
+        .credit {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="technical.html">Technical Portfolio</a>
+        <a href="qualification.html">Qualifications</a>
+        <a href="service.html">Services</a>
+    </div>
+
+    <div class="container">
+        <h1>AI Calculator</h1>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <input type="button" class="number-button" value="1" onclick="addToDisplay('1')">
+            <input type="button" class="number-button" value="2" onclick="addToDisplay('2')">
+            <input type="button" class="number-button" value="3" onclick="addToDisplay('3')">
+            <input type="button" class="operator-button" value="+" onclick="addToDisplay('+')">
+            <input type="button" class="number-button" value="4" onclick="addToDisplay('4')">
+            <input type="button" class="number-button" value="5" onclick="addToDisplay('5')">
+            <input type="button" class="number-button" value="6" onclick="addToDisplay('6')">
+            <input type="button" class="operator-button" value="-" onclick="addToDisplay('-')">
+            <input type="button" class="number-button" value="7" onclick="addToDisplay('7')">
+            <input type="button" class="number-button" value="8" onclick="addToDisplay('8')">
+            <input type="button" class="number-button" value="9" onclick="addToDisplay('9')">
+            <input type="button" class="operator-button" value="/" onclick="addToDisplay('/')">
+            <input type="button" class="clear-button" value="C" onclick="clearDisplay()">
+            <input type="button" class="number-button" value="0" onclick="addToDisplay('0')">
+            <input type="button" class="operator-button" value="*" onclick="addToDisplay('*')">
+            <input type="button" class="operator-button" value="=" onclick="calculate()">
+        </div>
+
+        <!-- Information and credit div -->
+        <div class="information">
+            <p>Prompt used:</p>
+            <p>1. Create an HTML file of a calculator</p>
+            <p>2. Design a navigation bar</p>
+            <p>3. Add a credit to ChatGPT</p>
+            <p class="credit">Powered by ChatGPT</p>
+        </div>
+    </div>
+
+    <script>
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            try {
+                var result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

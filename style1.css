@@ -1,0 +1,226 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: url("images/background1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+small {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon1 {
+    margin-left: 12%;
+}
+
+.icon2 {
+    position: relative;
+    bottom: 140px;
+    left: 60%;
+}
+
+.icon3 {
+    position: relative;
+    bottom: 50px;
+    left: 12%;
+}
+
+.icon4 {
+    width: 60%;
+    height: 60%;
+}
+
+.arrowicon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 96%;
+    bottom: 24px;
+}
+
+p {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 800;
+    margin-left: 30%;
+    letter-spacing: -1px;
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: right;
+    font-size: 30px;
+    margin-right: 25%;
+    font-weight: 300;
+    color: inherit;
+    padding: 50px;
+}
+
+h3 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+h4 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 300;
+    color: inherit;
+    font-size: 25px;
+}
+
+h5 {
+    margin-left: 12%;
+}
+h6 {
+    text-align: center;
+    padding: 50px 0;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+    color: #182e4f;
+    font-size: 30px;
+}
+
+b {
+    position: relative;
+    right: 12%;
+}
+
+.color {
+    color: aquamarine;
+    font-size: 60px;
+}
+
+.color1{
+    color: blueviolet;
+}
+.intro {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2px;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+.l {
+    margin-left: 25%;
+}
+
+.r {
+    margin-right: 25%;
+}
+
+.section {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2px;
+    margin-top: 30%;
+    margin-bottom: 15%;
+}
+  
+.aboutme {
+    position: relative;
+    left: 80%;
+}
+
+.homeImg {
+    position: relative;  
+    right: 70%;
+}
+
+.space {
+    position: relative;
+    top: 150px;    
+}
+
+.left1 {
+    position: relative;
+    margin-left: 52%;
+    top: 450px;
+}
+
+.right2 {
+    position: relative;
+    margin-left: 55%;
+    bottom: 80px;
+}
+
+.right {
+    margin-left: 31%;
+}
+/* Navigation bar */
+nav {
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 1px 0;
+    box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #555;
+}
+  
+/* stroke */
+nav.fill ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+nav.fill ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav.fill ul li a:hover:after {
+    width: 100%;
+}
